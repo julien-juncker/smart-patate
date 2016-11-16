@@ -65,4 +65,3 @@
       
       SendData(Cmd+2, 1,1);                        // Confirm arrrays have been sent
     }
-   
