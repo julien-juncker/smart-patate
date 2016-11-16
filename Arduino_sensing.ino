@@ -48,7 +48,7 @@ void setup()
   pinMode(9,OUTPUT);        //-Signal generator pin
   pinMode(8,OUTPUT);        //-Sync (test) pin
   pinMode(7,OUTPUT);
-  pinMode(6,OUTPUT);
+  pinMode(4,OUTPUT);
   
   Serial.begin(115200);
 
@@ -73,19 +73,19 @@ void loop()
     results[d]=results[d]*0.5+(float)(v)*0.5; //Filter results
    
     freq[d] = d;
-   Serial.println(v); 
-  float valeur =analogRead(0);
-  if ((440<=valeur) && (valeur<480)){
+
+  Serial.println(d); 
+  if ((280<=d) && (d<300)){
     digitalWrite(7,HIGH);
-    digitalWrite(6,HIGH);
+    digitalWrite(4,HIGH);
   }
-  if ((485<=valeur) && (valeur<450)){
+  if ((300<=d) && (d<350)){
     digitalWrite(7,LOW);
-    digitalWrite(6,HIGH);
+    digitalWrite(4,HIGH);
   }
-   if ((560<=valeur) && (valeur<620)){
+   if ((100<=d) && (d<150)){
     digitalWrite(7,LOW);
-    digitalWrite(6,LOW);
+    digitalWrite(4,LOW);
   }
 
 
