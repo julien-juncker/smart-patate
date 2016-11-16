@@ -94,18 +94,7 @@ void loop()
   // delayMicroseconds(1);
   }
 
-
 PlottArray(1,freq,results); 
-int me=analogRead(0);
- Serial.println(me); 
-    if ((590>=me)&&(me<=1000)){
-     digitalWrite(6,LOW);
-     digitalWrite(7,LOW);
-    }
-    else if ((440>=me)&&(me<=489)){
-      digitalWrite(6,HIGH);
-      digitalWrite(7,LOW);
-    }
 
   TOG(PORTB,0);            //-Toggle pin 8 after each sweep (good for scope)
 }
